@@ -11,6 +11,20 @@ public class AgregarSala extends javax.swing.JFrame {
     public AgregarSala() {
         initComponents();
     }
+    
+    
+    public boolean agregarDatosCorrectos(){
+        //Verificar datos ingresados en textfields
+        return true;
+    }
+    
+    
+    public void abrirVentanaAnterior(LoginForm ventanaAnterior){
+      ventanaAnterior.setVisible(true);
+    }
+    public void cancelarAgregarSala(){
+      System.exit(0);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -78,13 +92,13 @@ public class AgregarSala extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbUbicacion)
                     .addComponent(txtUbicacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
+                .addGap(50, 50, 50)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbCapacidad)
-                    .addComponent(txtCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(63, 63, 63)
+                    .addComponent(txtCapacidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbCapacidad))
+                .addGap(38, 38, 38)
                 .addComponent(btAgregarSala)
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -141,13 +155,13 @@ public class AgregarSala extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btAgregarSala;
+    public javax.swing.JButton btAgregarSala;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbCapacidad;
     private javax.swing.JLabel lbIdentificador;
     private javax.swing.JLabel lbUbicacion;
-    private javax.swing.JTextField txtCapacidad;
-    private javax.swing.JTextField txtIdentificador;
-    private javax.swing.JTextField txtUbicacion;
+    public javax.swing.JTextField txtCapacidad;
+    public javax.swing.JTextField txtIdentificador;
+    public javax.swing.JTextField txtUbicacion;
     // End of variables declaration//GEN-END:variables
 }
