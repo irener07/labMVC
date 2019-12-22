@@ -1,12 +1,17 @@
 package dao;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import modelo.Usuario;
 /**
  * @author catas
  */
 
 public class claseUsuarioDAO {
+  
+  
   public Usuario iniciarSesion(Usuario usuario){
+      
   }
   
   
@@ -19,12 +24,28 @@ public class claseUsuarioDAO {
       
   }
   
-  public boolean cambiarContrasenia(String nombreUsuario, String contrasenia, String contraseniaNueva){
   
+  private boolean verificarContrasenia(String contraseniaNueva, String contraseniaVieja){
+    if(!contraseniaNueva.equals(contraseniaVieja)){
+      return true;
+    }
+    else{
+      return false;  
+    }
   }
   
   
-  public boolean registrarUsuario(Usuario usuario){
-    Usuario nuevoUsuario = new Usuario(); 
+  public boolean cambiarContrasenia(String nombreUsuario, String contraseniaVieja, String contraseniaNueva){
+    if(verificarContrasenia(contraseniaNueva, contraseniaVieja) == true){
+      usuario.setContrasenia(contraseniaNueva);  
+      return true;
+    } 
+    else{
+      return false;  
+    }
+  }
+  
+  
+  public static void registrarUsuario(Usuario usuario){
   }
 }    
